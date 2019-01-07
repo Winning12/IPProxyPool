@@ -69,6 +69,6 @@ class WebRequestHandler(BaseHTTPServer.BaseHTTPRequestHandler):
             self.send_response(404)
 
 if __name__=='__main__':
-    server = BaseHTTPServer.HTTPServer(('0.0.0.0',API_PORT), WebRequestHandler)
+    server = BaseHTTPServer.HTTPServer(('',API_PORT), WebRequestHandler)
     server.serve_forever()
 
