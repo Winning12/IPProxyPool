@@ -16,7 +16,7 @@ urls = (
 
 
 def start_api_server():
-    sys.argv.append('118.25.56.186:%s' % config.API_PORT)
+    sys.argv.append('0.0.0.0:%s' % config.API_PORT)
     app = web.application(urls, globals())
     app.run()
 
@@ -38,6 +38,6 @@ class delete(object):
 
 
 if __name__ == '__main__':
-    sys.argv.append('118.25.56.186:8000')
+    sys.argv.append('0.0.0.0:8000')
     app = web.application(urls, globals())
     app.run()
